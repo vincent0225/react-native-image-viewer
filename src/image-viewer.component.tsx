@@ -145,7 +145,7 @@ export default class ImageViewer extends React.Component<typings.PropsDefine, ty
         let imageLoaded = false
 
         // 如果图片是 file: 开头，说明是本地图片，默认已经加载完毕
-        if (image.url.startsWith(`file:`)) {
+        if (image.url.startsWith(`file:`) || image.url.startsWith(`/`)) {
             imageLoaded = true
         }
 
